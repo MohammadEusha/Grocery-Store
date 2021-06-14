@@ -13,12 +13,16 @@ const Orders = () => {
             .then(data => setBoughtProducts(data))
     }, [loggedInUser.email])
     return (
-        <div>
+        <div style={{ backgroundColor: "#050c1a", color: "white" }}>
             <Navbar></Navbar>
-            <h1 className="mt-5 text-center">You Have Bought  {boughtProducts.length} Products....!!!!!</h1>
-            {
-                boughtProducts.map(bought => <OrdersDetails bought={bought} ></OrdersDetails>)
-            }
+            <h1 className="mt-5 text-center">Hi {loggedInUser.name} , You Have Bought  {boughtProducts.length} Products....!!!!!</h1>
+
+            <div className="row d-flex justify-content-center">
+                {
+                    boughtProducts.map(bought => <OrdersDetails bought={bought} ></OrdersDetails>)
+                }
+            </div>
+
         </div>
     );
 };

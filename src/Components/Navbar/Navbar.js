@@ -47,13 +47,13 @@ const Navbar = () => {
                             <Link style={{ textDecoration: 'none' }} class="nav-link color" to="/home">Home</Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link color" aria-current="page" href="#about">About</a>
+                            <a class="nav-link color" aria-current="page" href="#service">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link color" href="#service">Service</a>
+                            <a class="nav-link color" href="#about">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link color" href="#expert">Foods</a>
+                            <a class="nav-link color" href="#food">Foods</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link color" href="#reviews">Reviews</a>
@@ -65,10 +65,11 @@ const Navbar = () => {
                             <Link style={{ textDecoration: 'none' }} class="nav-link color" to="/orders">Orders</Link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link color" href="#contact">Contact</a>
-                        </li>
-                        <li class="nav-item">
                             <Link style={{ textDecoration: 'none' }} class="nav-link color" to="/admin">Admin</Link>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link color" href="#contact">Contact</a>
                         </li>
                         <li class="nav-item">
                             <Link style={{ textDecoration: 'none' }} class="nav-link color" to="/login">LogIn</Link>

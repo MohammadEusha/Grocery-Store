@@ -14,7 +14,8 @@ const Home = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <div className=" container mt-5 ">
+            <div id="food" className=" container mt-5 pt-5">
+                <h1 className="text-center text-light display-2 mt-5 pt-5">Foods We Provide</h1>
                 <div className="row d-flex justify-content-center">
 
                     {

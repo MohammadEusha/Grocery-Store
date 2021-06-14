@@ -6,7 +6,7 @@ const OrdersDetails = (props) => {
     const { name, price, weight, orderTime } = props.bought
 
     return (
-        <div className="m-5">
+        <div className="m-1 mb-4 col-md-3">
             <ul className="list-group">
                 <li className="list-group-item list-group-item-dark"><span className="fw-bolder text-dark">Product Name : {name} </span></li>
                 <li className="list-group-item "><span className="fw-bolder text-dark">Product Price : {price} $</span> </li>
