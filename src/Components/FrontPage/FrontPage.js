@@ -3,6 +3,7 @@ import Home from '../Home/Home';
 import Navbar from '../Navbar/Navbar';
 import AboutProducts from './AboutProducts/AboutProducts';
 import AboutService from './AboutService/AboutService';
+import Footer from './Footer/Footer';
 import Header from './Header/Header';
 
 const FrontPage = () => {
@@ -16,7 +17,9 @@ const FrontPage = () => {
                 <AboutProducts></AboutProducts>
                 <AboutService></AboutService>
                 <Home></Home>
-
+            </div>
+            <div className="footer-bg">
+                <Footer></Footer>
             </div>
         </div>
     );

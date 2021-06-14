@@ -1,0 +1,41 @@
+/* .footer-area {
+  background-color: #050c1a;
+} */
+
+.footer-bg {
+  position: relative;
+  background-image: url("../../../Images/3981545.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 1;
+}
+.footer-bg::before {
+  position: absolute;
+  content: "";
+  left: -1px;
+  top: 0px;
+  width: 100%;
+  background: #0a0b1a;
+  opacity: 0.5;
+  height: 100%;
+  z-index: -1;
+}
+
+.footer-area li {
+  padding-bottom: 10px;
+}
+
+.social-media .icon {
+  height: 40px;
+  width: 40px;
+  color: da;
+  border-radius: 50%;
+  border: 1px solid #dc3545;
+  padding: 10px;
+}
+.social-media .active-icon {
+  background-color: #dc3545;
+  color: white;
+}
