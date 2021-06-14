@@ -1,0 +1,106 @@
+.header {
+  position: relative;
+  background-image: url("../../Images/bg.jpg");
+  height: 1000px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 1;
+}
+.header::after {
+  position: absolute;
+  content: "";
+  left: -1px;
+  top: 0px;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(5, 11, 20, 0.28) 28%,
+    rgba(1, 13, 32, 0.69) 69%,
+    #050c1a 100%
+  );
+  opacity: 0.7;
+  height: 100%;
+  z-index: -1;
+}
+
+.fruit {
+  position: relative;
+  background-image: url("../../Images/FreshFruits\ And\ Veg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 1;
+}
+.fruit::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #0a0b1a;
+  opacity: 0.5;
+  height: 100%;
+  z-index: -1;
+}
+
+.tomato {
+  position: relative;
+  background-image: url("../../Images/mixed-fruits-with-apple-banana-orange-other.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 1;
+}
+.tomato::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #0a0b1a;
+  opacity: 0.5;
+  height: 100%;
+  z-index: -1;
+}
+
+.card-bg {
+  position: relative;
+  background-image: url("../../Images/mixed-assorted-fresh-berries-including-raspberry-blueberry-blackberry-redcurrant-blue-background-almond-nuts-coconut-flakes-healthy-ingredients-making-tasty-dessert-big-variety.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 1;
+}
+.card-bg::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #0a0b1a;
+  opacity: 0.5;
+  height: 100%;
+  z-index: -1;
+}
+
+.height {
+  height: 300px;
+}
+.color {
+  background: transparent;
+  color: white !important;
+}
+#nav-toggle-button {
+  background-color: #dc3545;
+}
+@media (max-width: 600px) {
+  .review {
+    height: 300px;
+    width: 320px !important;
+  }
+}
