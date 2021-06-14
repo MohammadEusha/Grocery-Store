@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
+import Swal from 'sweetalert2';
 
 const ManageProductsDetails = (props) => {
     const { _id, name, price, weight } = props.pd
@@ -11,12 +12,19 @@ const ManageProductsDetails = (props) => {
         })
             .then(res => res.json())
             .then(result => {
-                console.log('deleted')
+                Swal.fire({
+                    position: 'top-center',
+                    icon: 'success',
+                    title: 'Product Has Been Deleted',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+                console.log('deleted', result)
             })
         console.log(id)
     }
     return (
-        <div className="m-5">
+        <div className="m-1 mb-4 col-md-3">
             <ul className="list-group">
                 <li className="list-group-item list-group-item-dark"><span className="fw-bolder text-dark">Product Name : {name} </span></li>
                 <li className="list-group-item "><span className="fw-bolder text-dark">Product Price : {price} $</span> </li>

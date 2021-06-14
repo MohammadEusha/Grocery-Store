@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 import Payment from '../Payments/Payment/Payment';
 import "./CheckOut.css"
+import Swal from 'sweetalert2';
 const CheckOut = () => {
     const { name } = useParams();
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -32,7 +33,13 @@ const CheckOut = () => {
             .then(res => res.json())
             .then(data => {
                 if (data) {
-                    alert('Your Order Placed Successfully')
+                    Swal.fire({
+                        position: 'top-center',
+                        icon: 'success',
+                        title: 'Your Order Has Been Added Successfully.',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
                 }
             })
     }
@@ -123,7 +130,7 @@ const CheckOut = () => {
             </div>
     }
     return (
-        <div style={{ backgroundColor: "#050c1a", color: "white", height: "1150px" }}>
+        <div style={{ backgroundColor: "#050c1a", color: "white", height: "1100px" }}>
             {display}
         </div>
     );

@@ -119,9 +119,15 @@
 #nav-toggle-button {
   background-color: #dc3545;
 }
+
+.review {
+  background-color: #050c1a;
+  color: white;
+  height: 930px;
+}
+
 @media (max-width: 600px) {
   .review {
-    height: 300px;
-    width: 320px !important;
+    height: 1150px;
   }
 }

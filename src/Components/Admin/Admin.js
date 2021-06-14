@@ -5,14 +5,15 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlusCircle } from '@fortawesome/free-solid-svg-icons'
 import { UserContext } from '../../App';
-
+import logo from "../../Images/logo.png"
+import Swal from 'sweetalert2';
 const Admin = () => {
 
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
 
     let display;
     if (loggedInUser) {
-        display = <li style={{ marginLeft: '50px', fontWeight: 'bold' }} className="nav-item pt-2">
+        display = <li style={{ marginLeft: '50px', fontWeight: 'bold' }} className="nav-item pt-2 text-danger">
             {loggedInUser.name}
         </li>
     }
@@ -38,7 +39,16 @@ const Admin = () => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(eventData)
         })
-            .then(res => console.log('server side', res))
+            .then(res => {
+                Swal.fire({
+                    position: 'top-center',
+                    icon: 'success',
+                    title: 'New Product Has Been Added',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+                console.log('server side', res)
+            })
     };
 
 
@@ -58,51 +68,56 @@ const Admin = () => {
             });
     }
     return (
-        <div >
-            <div className="ms-5">
-                <nav className="d-flex navbar navbar-expand-lg">
-                    <div style={{ marginTop: '30px' }} className="container-fluid">
-                        <h3 className="text-success">Grocery Store</h3>
-                        <div className="d-flex flex-row-reverse" id="navbarNav">
-                            <ul className="navbar-nav justify-content-end ms-5">
-                                {display}
-                                <li style={{ marginLeft: '50px', fontWeight: 'bold' }} className="nav-item pt-2 text-dark ">
-                                    <Link style={{ textDecoration: 'none' }} className="text-success" to="/home">Home</Link>
-                                </li>
-                                <li style={{ marginLeft: '50px', fontWeight: 'bold' }} className="nav-item pt-2 text-dark ">
-                                    <Link style={{ textDecoration: 'none' }} className="text-success" to="/admin">Add Products</Link>
-                                </li>
-                                <li style={{ marginLeft: '50px', fontWeight: 'bold' }} className="nav-item pt-2 fw-bold">
-                                    <Link style={{ textDecoration: 'none' }} className="text-success" to="/manage">Manage Products</Link>
-                                </li>
-                            </ul>
-                        </div>
+        <div style={{ backgroundColor: "#12161f", height: "900px", color: "white" }}>
+            <nav class="navbar  navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <div class="container-fluid">
+                    <div className="col-md-6 ms-3">
+                        <img className="transaction-area " style={{ height: "50px", }} src={logo} alt="" />
+                        <a className="navbar-brand color ms-3 h1" href="#home">Grocery Store</a>
                     </div>
-                </nav>
-            </div>
-            <div className="text-center">
-                <h1>Add Products Here ....!!!!</h1>
+                    <button id="nav-toggle-button" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse ms-auto" id="navbarNav">
+                        <ul class="navbar-nav h5">
+                            {display}
+                            <li class="nav-item">
+                                <Link style={{ textDecoration: 'none' }} class="nav-link color" to="/home">Home</Link>
+                            </li>
+                            <li class="nav-item">
+                                <Link style={{ textDecoration: 'none' }} className="nav-link color" to="/admin">Add Products</Link>
+                            </li>
+                            <li class="nav-item">
+                                <Link style={{ textDecoration: 'none' }} className="nav-link color" to="/manage">Manage Products</Link>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div className="text-center mt-5 pt-5">
+                <h1 className="mt-5 pt-5">Add Products Here ....!!!!</h1>
             </div>
 
             <form className="row mt-5 m-5" onSubmit={handleSubmit(onSubmit)}>
                 <div className="col-md-6">
                     <label for="name" className="form-label"><h4>Product Name</h4></label>
-                    <input name="name" ref={register} className="form-control" id="inputEmail4" />
+                    <input style={{ backgroundColor: "#050c1f" }} placeholder="Write Product Name" name="name" ref={register} className="form-control text-light" />
                 </div>
                 <div className="col-md-6">
-                    <label for="weight" className="form-label"><h4>Weight</h4></label>
-                    <input name="weight" className="form-control" ref={register} id="inputPassword4" />
+                    <label for="weight" className="form-label"><h4>Product Weight</h4></label>
+                    <input style={{ backgroundColor: "#050c1f" }} placeholder="Write Product Weight" name="weight" className="form-control text-light" ref={register} />
                 </div>
                 <div className="col-md-6 mt-3">
-                    <label for="Price" className="form-label"><h4>Price</h4></label>
-                    <input name="price" className="form-control" ref={register} id="inputEmail4" />
+                    <label for="price" className="form-label"><h4>Price</h4></label>
+                    <input style={{ backgroundColor: "#050c1f" }} placeholder="Write Product Price" name="price" className="form-control text-light" ref={register} />
                 </div>
                 <div className="col-md-6 mt-3">
-                    <label for="weight" className="form-label"><h4>Insert File</h4></label>
-                    <input className="form-control" type="file" onChange={handleImageUpload} id="formFile" />
+                    <label className="form-label"><h4>Insert Product Image</h4></label>
+                    <input style={{ backgroundColor: "#050c1f" }} placeholder="Write Your Name" className="form-control text-light" type="file" onChange={handleImageUpload} id="formFile" />
                 </div>
-                <div className="col-12 d-flex justify-content-end">
-                    <button className="mt-4 btn btn-success btn-lg " type="submit" ><FontAwesomeIcon icon={faPlusCircle} />  Add Product</button>
+                <div className="col-12 d-grid ">
+                    <button className="mt-4 btn btn-danger btn-lg btn-block" type="submit" ><FontAwesomeIcon icon={faPlusCircle} />  Add Product</button>
                 </div>
             </form>
         </div>

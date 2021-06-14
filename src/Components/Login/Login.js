@@ -39,7 +39,7 @@ const Login = () => {
             });
     }
     return (
-        <div style={{ backgroundColor: '#050c1a', height: "1200px" }}>
+        <div className="review">
             <Navbar></Navbar>
             <div style={{ paddingTop: "100px" }} className="text-center">
                 <div>
