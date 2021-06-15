@@ -65,7 +65,7 @@ const Navbar = () => {
                             <Link style={{ textDecoration: 'none' }} class="nav-link color" to="/orders">Orders</Link>
                         </li>
                         <li class="nav-item">
-                            <Link style={{ textDecoration: 'none' }} class="nav-link color" to="/admin">Admin</Link>
+                            <Link style={{ textDecoration: 'none' }} class="nav-link color" to="/dashboard">Dashboard</Link>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link color" href="#contact">Contact</a>

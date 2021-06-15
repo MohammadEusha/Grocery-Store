@@ -140,14 +140,14 @@
   background-color: #dc3545;
 }
 
-.review {
+.logIn {
   background-color: #050c1a;
   color: white;
-  height: 0px;
+  height: 930px;
 }
 
 @media (max-width: 600px) {
-  .review {
+  .logIn {
     height: 1150px;
   }
 }

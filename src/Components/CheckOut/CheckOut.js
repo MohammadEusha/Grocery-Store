@@ -128,7 +128,7 @@ const CheckOut = () => {
             </div>
     }
     return (
-        <div style={{ backgroundColor: "#050c1a", color: "white", height: "975px" }}>
+        <div style={{ backgroundColor: "#050c1a", color: "white", height: "930px" }}>
             {display}
         </div>
     );

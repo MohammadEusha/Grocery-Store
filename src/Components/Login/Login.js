@@ -39,7 +39,7 @@ const Login = () => {
             });
     }
     return (
-        <div className="review">
+        <div className="logIn">
             <Navbar></Navbar>
             <div style={{ paddingTop: "100px" }} className="text-center">
                 <div>

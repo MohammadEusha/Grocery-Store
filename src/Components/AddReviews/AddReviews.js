@@ -81,7 +81,7 @@ const AddReviews = () => {
                                 <Link style={{ textDecoration: 'none' }} class="nav-link color" to="/home">Home</Link>
                             </li>
                             <li class="nav-item">
-                                <Link style={{ textDecoration: 'none' }} className="nav-link color" to="/admin">Add Products</Link>
+                                <Link style={{ textDecoration: 'none' }} className="nav-link color" to="/dashboard">Add Products</Link>
                             </li>
                             <li class="nav-item">
                                 <Link style={{ textDecoration: 'none' }} className="nav-link color" to="/manage">Manage Products</Link>
