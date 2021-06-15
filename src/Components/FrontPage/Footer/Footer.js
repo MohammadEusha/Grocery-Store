@@ -17,8 +17,8 @@ const Footer = () => {
         { name: "100% Organic Foods Delivery" },
     ]
     return (
-        <footer id="contact" className="footer-area clear-both mt-5 pb-5 h6">
-            <div className="container pt-5">
+        <footer id="contact" className="footer-area clear-both mt-5  h6">
+            <div className="container pt-5 pb-3">
                 <div className="row py-5">
                     <div className="col-md-6">
                         <div className="d-flex ">

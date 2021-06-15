@@ -47,6 +47,9 @@ const ManageProducts = () => {
                             <li class="nav-item">
                                 <Link style={{ textDecoration: 'none' }} className="nav-link color" to="/manage">Manage Products</Link>
                             </li>
+                            <li class="nav-item">
+                                <Link style={{ textDecoration: 'none' }} className="nav-link color" to="/addReviews">Add Reviews</Link>
+                            </li>
                         </ul>
                     </div>
                 </div>

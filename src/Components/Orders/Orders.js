@@ -15,7 +15,7 @@ const Orders = () => {
     return (
         <div style={{ backgroundColor: "#050c1a", color: "white", height: "900px" }}>
             <Navbar></Navbar>
-            <h1 className="mt-5 text-center">Hi {loggedInUser.name} , You Have Bought  {boughtProducts.length} Products....!!!!!</h1>
+            <h1 className="mt-5 pt-5 text-center">Hi {loggedInUser.name} , You Have Bought  {boughtProducts.length} Products....!!!!!</h1>
 
             <div className="row d-flex justify-content-center">
                 {

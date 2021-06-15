@@ -10,7 +10,7 @@ const Navbar = () => {
     const [isCollapsed, setCollapsed] = useState(null);
     useEffect(() => {
         window.addEventListener("scroll", () => {
-            if (window.scrollY > 50) {
+            if (window.scrollY > 10) {
                 setSticky(true)
             } else {
                 setSticky(false)

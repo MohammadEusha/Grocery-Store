@@ -52,20 +52,18 @@ const CheckOut = () => {
             <div>
                 <Navbar></Navbar>
                 <div>
-                    <h3 className="mt-5 pt-5 text-center">Hi {loggedInUser.name}...Please Pay For Getting Your Foods ....!!!!!</h3>
+                    <h3 className="mt-5 pt-5 text-center">Hi <span className="text-danger">{loggedInUser.name}</span>. Please Pay For Getting Your Foods.If You Want To Update Your Information PLease Click On the Update Information Button.</h3>
                     <div className="d-grid text-center container mt-2">
                         <button onClick={() => setOrderedProduct(!orderedProduct)} variant="secondary" className="btn-lg  btn-block btn-danger" block>Update Information</button>
                     </div>
                 </div>
-                <div style={{ paddingBottom: "210px" }} id="Contact" className=" mt-5 mb-5 pt-5" fluid>
-                    <div className=" row mt-5">
-                        <div className="col-md-2"></div>
-                        <div className="text-center col-md-4">
+                <div id="Contact" className=" mb-5" fluid>
+                    <div className=" row mt-5 d-flex justify-content-center align-items-center">
+                        <div className="text-center col-md-6">
                             <Payment></Payment>
 
                         </div>
                         <div className="col-md-4">
-
                             <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_yzoqyyqf.json" background="transparent" speed="1" loop autoplay></lottie-player>
                         </div>
                         <div className="col-md-4"></div>
@@ -130,7 +128,7 @@ const CheckOut = () => {
             </div>
     }
     return (
-        <div style={{ backgroundColor: "#050c1a", color: "white", height: "1100px" }}>
+        <div style={{ backgroundColor: "#050c1a", color: "white", height: "975px" }}>
             {display}
         </div>
     );

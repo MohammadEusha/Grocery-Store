@@ -14,6 +14,7 @@ import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import CheckOut from './Components/CheckOut/CheckOut';
 import Orders from './Components/Orders/Orders';
 import FrontPage from './Components/FrontPage/FrontPage';
+import AddReviews from './Components/AddReviews/AddReviews';
 
 
 export const UserContext = createContext();
@@ -42,6 +43,9 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path="/manage">
             <ManageProducts></ManageProducts>
+          </PrivateRoute>
+          <PrivateRoute path="/addReviews">
+            <AddReviews></AddReviews>
           </PrivateRoute>
           <Route exact path="/">
             <FrontPage></FrontPage>

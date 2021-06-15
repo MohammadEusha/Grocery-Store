@@ -68,7 +68,7 @@ const Admin = () => {
             });
     }
     return (
-        <div style={{ backgroundColor: "#12161f", height: "900px", color: "white" }}>
+        <div style={{ backgroundColor: "#12161f", height: "915px", color: "white" }}>
             <nav class="navbar  navbar-expand-lg navbar-dark bg-dark fixed-top">
                 <div class="container-fluid">
                     <div className="col-md-6 ms-3">
@@ -90,6 +90,9 @@ const Admin = () => {
                             <li class="nav-item">
                                 <Link style={{ textDecoration: 'none' }} className="nav-link color" to="/manage">Manage Products</Link>
                             </li>
+                            <li class="nav-item">
+                                <Link style={{ textDecoration: 'none' }} className="nav-link color" to="/addReviews">Add Reviews</Link>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -100,11 +103,11 @@ const Admin = () => {
             </div>
 
             <form className="row mt-5 m-5" onSubmit={handleSubmit(onSubmit)}>
-                <div className="col-md-6">
+                <div className="col-md-6 mt-3">
                     <label for="name" className="form-label"><h4>Product Name</h4></label>
                     <input style={{ backgroundColor: "#050c1f" }} placeholder="Write Product Name" name="name" ref={register} className="form-control text-light" />
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-6 mt-3">
                     <label for="weight" className="form-label"><h4>Product Weight</h4></label>
                     <input style={{ backgroundColor: "#050c1f" }} placeholder="Write Product Weight" name="weight" className="form-control text-light" ref={register} />
                 </div>

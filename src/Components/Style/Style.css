@@ -88,6 +88,26 @@
   z-index: -1;
 }
 
+.review-bg {
+  position: relative;
+  background-image: url("../../Images/rm119batch5-penny-06a-cherryleaves.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}
+.review-bg::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #0a0b1a;
+  opacity: 0.5;
+  height: 100%;
+  z-index: -1;
+}
+
 .footer-bg {
   position: relative;
   background-image: url("../../Images/watermelon_slice_and_seeds_pattern_background.jpg");
@@ -123,7 +143,7 @@
 .review {
   background-color: #050c1a;
   color: white;
-  height: 930px;
+  height: 0px;
 }
 
 @media (max-width: 600px) {

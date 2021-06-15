@@ -13,6 +13,14 @@ button {
   position: relative;
 }
 
+@media (max-width: 600px) {
+  .AppWrapper {
+    width: 350px;
+    height: 400px;
+    position: relative;
+  }
+}
+
 @keyframes fade {
   from {
     opacity: 0;

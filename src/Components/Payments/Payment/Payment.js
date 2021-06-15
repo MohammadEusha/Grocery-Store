@@ -218,7 +218,7 @@ const stripePromise = loadStripe("pk_test_6pRNASCoBOKtIshFeQd4XMUh");
 
 const Payment = () => {
     return (
-        <div style={{ marginTop: "100px", }} className="AppWrapper">
+        <div className=" col-md-12">
             <Elements stripe={stripePromise} options={ELEMENTS_OPTIONS}>
                 <CheckoutForm />
 
