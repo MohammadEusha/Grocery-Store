@@ -17,8 +17,8 @@ const ProductsCard = (props) => {
 
 
         <div className="col-md-3 m-3 ">
-            <div class="card h-auto mb-3 card-bg text-light border border-info border-2 rounded">
-                <img src={image} className="card-img-top img-fluid " alt="..." />
+            <div class="card h-auto mb-3 card-bg text-light border border-info border-2 rounded focus">
+                <img src={image} className="card-img-top img-fluid" alt="..." />
                 <div className="card-body">
                     <h5 className="text-center">{name} : {weight} Kg</h5>
                     <div className="mt-3 d-flex">
