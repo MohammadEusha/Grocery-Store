@@ -31,7 +31,7 @@ const Navbar = () => {
     return (
         <nav className={(isSticky || isCollapsed) ? "navbar  navbar-expand-lg navbar-dark bg-dark fixed-top" : "navbar  navbar-expand-lg navbar-light color text-dark"}>
             <div class="container-fluid">
-                <div className="col-md-5 ms-3">
+                <div className="col-md-6 ms-3">
                     <img className="transaction-area " style={{ height: "50px", }} src={logo} alt="" />
                     <a className="navbar-brand color ms-3 h1" href="#home">Grocery Store</a>
                 </div>
@@ -42,7 +42,7 @@ const Navbar = () => {
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarText">
-                    <ul class="navbar-nav col-md-5  mb-2 mb-lg-0 h5">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 h5">
                         <li class="nav-item">
                             <Link style={{ textDecoration: 'none' }} class="nav-link color" to="/home">Home</Link>
                         </li>

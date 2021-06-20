@@ -36,7 +36,7 @@ const ManageProducts = () => {
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse ms-auto" id="navbarNav">
-                        <ul class="navbar-nav h5">
+                        <ul class="navbar-nav ms-auto h5">
                             {display}
                             <li class="nav-item">
                                 <Link style={{ textDecoration: 'none' }} class="nav-link color" to="/home">Home</Link>

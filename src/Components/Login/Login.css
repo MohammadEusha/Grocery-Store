@@ -1,0 +1,11 @@
+.logIn {
+  background-color: #12161f;
+  color: white;
+  height: 980px;
+}
+
+@media (max-width: 600px) {
+  .logIn {
+    height: 1700px;
+  }
+}

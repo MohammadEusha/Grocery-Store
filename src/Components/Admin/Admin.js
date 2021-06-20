@@ -68,7 +68,7 @@ const Admin = () => {
             });
     }
     return (
-        <div style={{ backgroundColor: "#12161f", height: "915px", color: "white" }}>
+        <div style={{ backgroundColor: "#12161f", height: "925px", color: "white" }}>
             <nav class="navbar  navbar-expand-lg navbar-dark bg-dark fixed-top">
                 <div class="container-fluid">
                     <div className="col-md-6 ms-3">
@@ -79,7 +79,7 @@ const Admin = () => {
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse ms-auto" id="navbarNav">
-                        <ul class="navbar-nav h5">
+                        <ul class="navbar-nav ms-auto h5">
                             {display}
                             <li class="nav-item">
                                 <Link style={{ textDecoration: 'none' }} class="nav-link color" to="/home">Home</Link>
