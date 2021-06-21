@@ -14,9 +14,13 @@ The Website is about your daily grocery products.In this site you will at first 
 
 • Admin Panel
 
+• Customer Panel
+
 • Product Add System
 
-• Dashboard
+• Customer Review System 
+
+• Stripe Payment System
 
 ### Technology :-
 
