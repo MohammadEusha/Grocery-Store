@@ -2,14 +2,11 @@
 
 Website Name : Grocery Store
 
-
-
 # About this Website
 
 ### Project Details :-
 
 The Website is about your daily grocery products.In this site you will at first find some cards about names of products,weight and prices.You will find a button in every card named as Buy Now.Click on the button then login with your Google account to order your products.
-
 
 ### Features :-
 
@@ -21,9 +18,6 @@ The Website is about your daily grocery products.In this site you will at first 
 
 • Dashboard
 
-
-
-
 ### Technology :-
 
 • Frontend : CSS, Bootstrap, JavaScript, React JS
@@ -31,4 +25,3 @@ The Website is about your daily grocery products.In this site you will at first 
 • Backend : NodeJS, Express, Postman, Mongo DB.
 
 • Deploy Tools : Firebase, Heroku, Github.
-# Epic-Eateries-Full-Stack
