@@ -113,7 +113,10 @@ const Login = () => {
                                         <input className="btn-lg  btn-block btn-danger" type="submit" value={newUser ? 'Sign Up' : 'Sign In'} />
                                     </div>
                                     <div >
-                                        <p>New Here??? Become One Of Us <a onClick={() => setNewUser(!newUser)} href="#">Sign Up</a></p>
+                                        {newUser ?
+                                            <h5>Signed Up Already??? Ok Then <a className="text-danger" onClick={() => setNewUser(!newUser)} href="#">Sign In</a></h5>
+                                            :
+                                            <h5>New Here??? Become One Of Us <a className="text-danger" onClick={() => setNewUser(!newUser)} href="#">Sign Up</a></h5>}
                                     </div>
                                 </form>
 
