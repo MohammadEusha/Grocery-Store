@@ -25,10 +25,10 @@ const ManageProducts = () => {
     }, [products])
 
     return (
-        <div style={{ backgroundColor: "#12161f", height: "1300px", color: "white" }}>
+        <div style={{ color: "white" }} className="pt-3 manageBackground">
             <nav class="navbar  navbar-expand-lg navbar-dark bg-dark fixed-top">
                 <div class="container-fluid">
-                    <div className="col-md-6 ms-3">
+                    <div className="ms-3">
                         <img className="transaction-area " style={{ height: "50px", }} src={logo} alt="" />
                         <a className="navbar-brand color ms-3 h1" href="#home">Grocery Store</a>
                     </div>
@@ -54,9 +54,10 @@ const ManageProducts = () => {
                     </div>
                 </div>
             </nav>
-            <div className="mt-5 pt-5">
-                <h1 className="text-center mt-5 pt-5">You Total Have {products.length} Products ....!!!!!</h1>
-                <div className="row d-flex justify-content-center">
+            <div className="container mt-5">
+                <h1 className="text-center pt-5">You Total Have {products.length} Products ....!!!!!</h1>
+
+                <div className="row ps-2">
                     {
                         products.map(pd => <ManageProductsDetails pd={pd}></ManageProductsDetails>)
                     }

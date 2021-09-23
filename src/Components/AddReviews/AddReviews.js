@@ -64,10 +64,10 @@ const AddReviews = () => {
             });
     }
     return (
-        <div style={{ backgroundColor: "#12161f", height: "925px", color: "white" }}>
+        <div style={{ backgroundColor: "#12161f", height: "927px", color: "white" }}>
             <nav class="navbar  navbar-expand-lg navbar-dark bg-dark fixed-top">
                 <div class="container-fluid">
-                    <div className="col-md-6 ms-3">
+                    <div className="ms-3">
                         <img className="transaction-area " style={{ height: "50px", }} src={logo} alt="" />
                         <a className="navbar-brand color ms-3 h1" href="#home">Grocery Store</a>
                     </div>
@@ -93,31 +93,32 @@ const AddReviews = () => {
                     </div>
                 </div>
             </nav>
-
-            <div className="text-center mt-5 pt-5">
-                <h1 className="mt-5 pt-5">Add Reviews Here ....!!!!</h1>
+            <div className="container mt-5">
+                <div className="text-center  pt-5">
+                    <h1 className="mt-5 pt-5">Add Reviews Here ....!!!!</h1>
+                </div>
+                <form className="row mt-5" onSubmit={handleSubmit(onSubmit)}>
+                    <div className="col-md-6 mt-3">
+                        <label for="name" className="form-label"><h4>Your Name</h4></label>
+                        <input style={{ backgroundColor: "#050c1f" }} placeholder="Write Your Name" name="name" ref={register} className="form-control text-light" id="inputEmail4" />
+                    </div>
+                    <div className="col-md-6 mt-3">
+                        <label for="from" className="form-label"><h4>Place You Live</h4></label>
+                        <input style={{ backgroundColor: "#050c1f" }} placeholder="Write Your Location" name="from" className="form-control text-light" ref={register} id="inputPassword4" />
+                    </div>
+                    <div className="col-md-6 mt-3">
+                        <label for="quote" className="form-label"><h4>Your Review About Our Service </h4></label>
+                        <input style={{ backgroundColor: "#050c1f" }} placeholder="Write Your Review" name="quote" className="form-control text-light" ref={register} id="inputEmail4" />
+                    </div>
+                    <div className="col-md-6 mt-3">
+                        <label className="form-label"><h4>Insert Your Image</h4></label>
+                        <input style={{ backgroundColor: "#050c1f" }} className="form-control text-light" type="file" onChange={handleImageUpload} id="formFile" />
+                    </div>
+                    <div className="col-12 d-grid ">
+                        <button className="mt-4 btn btn-danger btn-lg btn-block" type="submit" ><FontAwesomeIcon icon={faPlusCircle} />  Add Reviews</button>
+                    </div>
+                </form>
             </div>
-            <form className="row mt-5 m-5" onSubmit={handleSubmit(onSubmit)}>
-                <div className="col-md-6 mt-3">
-                    <label for="name" className="form-label"><h4>Your Name</h4></label>
-                    <input style={{ backgroundColor: "#050c1f" }} placeholder="Write Your Name" name="name" ref={register} className="form-control text-light" id="inputEmail4" />
-                </div>
-                <div className="col-md-6 mt-3">
-                    <label for="from" className="form-label"><h4>Place You Live</h4></label>
-                    <input style={{ backgroundColor: "#050c1f" }} placeholder="Write Your Location" name="from" className="form-control text-light" ref={register} id="inputPassword4" />
-                </div>
-                <div className="col-md-6 mt-3">
-                    <label for="quote" className="form-label"><h4>Your Review About Our Service </h4></label>
-                    <input style={{ backgroundColor: "#050c1f" }} placeholder="Write Your Review" name="quote" className="form-control text-light" ref={register} id="inputEmail4" />
-                </div>
-                <div className="col-md-6 mt-3">
-                    <label className="form-label"><h4>Insert Your Image</h4></label>
-                    <input style={{ backgroundColor: "#050c1f" }} className="form-control text-light" type="file" onChange={handleImageUpload} id="formFile" />
-                </div>
-                <div className="col-12 d-grid ">
-                    <button className="mt-4 btn btn-danger btn-lg btn-block" type="submit" ><FontAwesomeIcon icon={faPlusCircle} />  Add Reviews</button>
-                </div>
-            </form>
         </div>
     );
 };

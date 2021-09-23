@@ -161,3 +161,40 @@
 .focus:hover {
   transform: scale(1.1);
 }
+
+.pay {
+  overflow-x: hidden;
+}
+
+.background {
+  background-color: #12161f;
+  height: 980px;
+}
+
+@media (max-width: 600px) {
+  .background {
+    height: 1150px;
+  }
+}
+@media (max-width: 320px) {
+  .background {
+    height: 1200px;
+  }
+}
+
+.manageBackground {
+  background-color: #12161f;
+  height: 980px;
+}
+
+@media (max-width: 768px) {
+  .manageBackground {
+    height: 1400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .manageBackground {
+    height: 2600px;
+  }
+}

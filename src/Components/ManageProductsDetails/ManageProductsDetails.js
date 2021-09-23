@@ -24,15 +24,14 @@ const ManageProductsDetails = (props) => {
         console.log(id)
     }
     return (
-        <div className="m-1 mb-4 col-md-3">
-            <ul className="list-group">
-                <li className="list-group-item list-group-item-dark"><span className="fw-bolder text-dark">Product Name : {name} </span></li>
-                <li className="list-group-item "><span className="fw-bolder text-dark">Product Price : {price} $</span> </li>
-                <li className="list-group-item "><span className="fw-bolder text-dark">Product Weight : {weight} Kg</span> </li>
-                <li onClick={() => handleDelete(_id)} className="list-group-item "><span className="btn btn-outline-danger fw-bolder text-dark"><FontAwesomeIcon icon={faTrashAlt} />  Delete Product</span></li>
 
-            </ul>
-        </div>
+        <ul className="list-group col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12  mt-3">
+            <li className="list-group-item list-group-item-dark"><span className="fw-bolder text-dark">Product Name : {name} </span></li>
+            <li className="list-group-item "><span className="fw-bolder text-dark">Product Price : {price} $</span> </li>
+            <li className="list-group-item "><span className="fw-bolder text-dark">Product Weight : {weight} Kg</span> </li>
+            <li onClick={() => handleDelete(_id)} className="list-group-item d-grid"><span className="btn btn-outline-danger fw-bolder text-dark"><FontAwesomeIcon icon={faTrashAlt} />  Delete Product</span></li>
+
+        </ul>
     );
 };
 

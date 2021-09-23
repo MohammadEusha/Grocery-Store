@@ -68,10 +68,10 @@ const Admin = () => {
             });
     }
     return (
-        <div style={{ backgroundColor: "#12161f", height: "925px", color: "white" }}>
+        <div style={{ backgroundColor: "#12161f", height: "927px", color: "white" }}>
             <nav class="navbar  navbar-expand-lg navbar-dark bg-dark fixed-top">
                 <div class="container-fluid">
-                    <div className="col-md-6 ms-3">
+                    <div className="ms-3">
                         <img className="transaction-area " style={{ height: "50px", }} src={logo} alt="" />
                         <a className="navbar-brand color ms-3 h1" href="#home">Grocery Store</a>
                     </div>
@@ -98,31 +98,33 @@ const Admin = () => {
                 </div>
             </nav>
 
-            <div className="text-center mt-5 pt-5">
-                <h1 className="mt-5 pt-5">Add Products Here ....!!!!</h1>
-            </div>
+            <div className="container mt-5">
+                <div className="text-center  pt-5">
+                    <h1 className="mt-5 pt-5">Add Products Here ....!!!!</h1>
+                </div>
 
-            <form className="row mt-5 m-5" onSubmit={handleSubmit(onSubmit)}>
-                <div className="col-md-6 mt-3">
-                    <label for="name" className="form-label"><h4>Product Name</h4></label>
-                    <input style={{ backgroundColor: "#050c1f" }} placeholder="Write Product Name" name="name" ref={register} className="form-control text-light" />
-                </div>
-                <div className="col-md-6 mt-3">
-                    <label for="weight" className="form-label"><h4>Product Weight</h4></label>
-                    <input style={{ backgroundColor: "#050c1f" }} placeholder="Write Product Weight" name="weight" className="form-control text-light" ref={register} />
-                </div>
-                <div className="col-md-6 mt-3">
-                    <label for="price" className="form-label"><h4>Price</h4></label>
-                    <input style={{ backgroundColor: "#050c1f" }} placeholder="Write Product Price" name="price" className="form-control text-light" ref={register} />
-                </div>
-                <div className="col-md-6 mt-3">
-                    <label className="form-label"><h4>Insert Product Image</h4></label>
-                    <input style={{ backgroundColor: "#050c1f" }} placeholder="Write Your Name" className="form-control text-light" type="file" onChange={handleImageUpload} id="formFile" />
-                </div>
-                <div className="col-12 d-grid ">
-                    <button className="mt-4 btn btn-danger btn-lg btn-block" type="submit" ><FontAwesomeIcon icon={faPlusCircle} />  Add Product</button>
-                </div>
-            </form>
+                <form className="row mt-5" onSubmit={handleSubmit(onSubmit)}>
+                    <div className="col-md-6 mt-3">
+                        <label for="name" className="form-label"><h4>Product Name</h4></label>
+                        <input style={{ backgroundColor: "#050c1f" }} placeholder="Write Product Name" name="name" ref={register} className="form-control text-light" />
+                    </div>
+                    <div className="col-md-6 mt-3">
+                        <label for="weight" className="form-label"><h4>Product Weight</h4></label>
+                        <input style={{ backgroundColor: "#050c1f" }} placeholder="Write Product Weight" name="weight" className="form-control text-light" ref={register} />
+                    </div>
+                    <div className="col-md-6 mt-3">
+                        <label for="price" className="form-label"><h4>Price</h4></label>
+                        <input style={{ backgroundColor: "#050c1f" }} placeholder="Write Product Price" name="price" className="form-control text-light" ref={register} />
+                    </div>
+                    <div className="col-md-6 mt-3">
+                        <label className="form-label"><h4>Insert Product Image</h4></label>
+                        <input style={{ backgroundColor: "#050c1f" }} placeholder="Write Your Name" className="form-control text-light" type="file" onChange={handleImageUpload} id="formFile" />
+                    </div>
+                    <div className="col-12 d-grid ">
+                        <button className="mt-4 btn btn-danger btn-lg btn-block" type="submit" ><FontAwesomeIcon icon={faPlusCircle} />  Add Product</button>
+                    </div>
+                </form>
+            </div>
         </div>
     );
 };

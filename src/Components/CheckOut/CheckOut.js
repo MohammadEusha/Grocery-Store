@@ -49,7 +49,7 @@ const CheckOut = () => {
     let display;
     if (orderedProduct) {
         display =
-            <div>
+            <div className="pay">
                 <Navbar></Navbar>
                 <div>
                     <h3 className="mt-5 pt-5 text-center container">Hi <span className="text-danger">{loggedInUser.name}</span>. Please Pay For Getting Your Foods.If You Want To Update Your Information PLease Click On the Update Information Button.</h3>
@@ -66,7 +66,6 @@ const CheckOut = () => {
                         <div className="col-md-4">
                             <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_yzoqyyqf.json" background="transparent" speed="1" loop autoplay></lottie-player>
                         </div>
-                        <div className="col-md-4"></div>
                     </div>
                 </div>
             </div>
@@ -75,60 +74,63 @@ const CheckOut = () => {
         display =
             <div>
                 <Navbar></Navbar>
-                <div id="Contact" className=" my-5 pb-5 p-3" fluid>
-                    <div className="row mt-5">
-                        <div className="col-md-7 mt-5 pt-5">
-                            <table className="table mt-2 table-hover table-striped table-secondary">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Food Name</th>
-                                        <th scope="col">Quantity</th>
-                                        <th scope="col">Price</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td className="fw-bolder">{name}</td>
-                                        <td className="ps-4 fw-bolder">{pdType && pdType.weight + 'Kg'}</td>
-                                        <td className="fw-bolder">{pdType && pdType.price + '$'}</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div className="col-md-12 d-grid">
-                                <button onClick={addToCart} className="btn btn-danger btn-lg" ><FontAwesomeIcon icon={faCartPlus} /> Add To Cart</button>
+                <div className="container">
+                    <div id="Contact" className=" my-5 pb-5  mx-3" fluid>
+                        <div className="row mt-5">
+                            <div className="col-md-7 mt-5 pt-5">
+                                <table className="table mt-2 table-hover table-striped table-secondary">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Food Name</th>
+                                            <th scope="col">Quantity</th>
+                                            <th scope="col">Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td className="fw-bolder">{name}</td>
+                                            <td className="ps-4 fw-bolder">{pdType && pdType.weight + 'Kg'}</td>
+                                            <td className="fw-bolder">{pdType && pdType.price + '$'}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div className="col-md-12 d-grid">
+                                    <button onClick={addToCart} className="btn btn-danger btn-lg" ><FontAwesomeIcon icon={faCartPlus} /> Add To Cart</button>
+                                </div>
                             </div>
-                        </div>
-                        <div className="col-md-4"  >
-                            <div style={{ marginTop: "100px" }} id="booking-area" className="booking-form ">
-                                <div className="input-group ">
-                                    <label for="">Your Name</label>
-                                    <input className="inp-style text-light" type="text" name="" placeholder="Write Your Name" />
-                                </div>
-                                <div className="input-group">
-                                    <label for="">Your Phone Number</label>
-                                    <input className="inp-style text-light" type="text" name="" placeholder="Write Your Phone Number" />
-                                </div>
-                                <div className="input-group">
-                                    <label for="">Delivered Location</label>
-                                    <input className="inp-style text-light" type="text" name="" placeholder="Write Your Location" />
-                                </div>
-                                <div className="inputs">
-                                    <div className="input-group">
-                                        <label for="">Order Date</label>
-                                        <input className="inp-style text-light" type="date" name="" />
+                            <div className="col-md-5"  >
+                                <div style={{ marginTop: "100px" }} id="booking-area" className="booking-form ">
+                                    <div className="input-group ">
+                                        <label for="">Your Name</label>
+                                        <input className="inp-style text-light" type="text" name="" placeholder="Write Your Name" />
                                     </div>
-                                </div>
-                                <div className="d-grid">
-                                    <button onClick={() => setOrderedProduct(!orderedProduct)} variant="secondary" className="btn-lg  btn-block btn-danger" block>Confirm</button>
+                                    <div className="input-group">
+                                        <label for="">Your Phone Number</label>
+                                        <input className="inp-style text-light" type="text" name="" placeholder="Write Your Phone Number" />
+                                    </div>
+                                    <div className="input-group">
+                                        <label for="">Delivered Location</label>
+                                        <input className="inp-style text-light" type="text" name="" placeholder="Write Your Location" />
+                                    </div>
+                                    <div className="inputs">
+                                        <div className="input-group">
+                                            <label for="">Order Date</label>
+                                            <input className="inp-style text-light" type="date" name="" />
+                                        </div>
+                                    </div>
+                                    <div className="d-grid">
+                                        <button onClick={() => setOrderedProduct(!orderedProduct)} variant="secondary" className="btn-lg  btn-block btn-danger" block>Confirm</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
     }
     return (
-        <div style={{ backgroundColor: "#050c1a", color: "white", height: "980px" }}>
+        <div style={{ color: "white" }} className="background">
             {display}
         </div>
     );
