@@ -9,6 +9,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+  padding: 1px;
   z-index: 1;
 }
 .footer-bg::before {
