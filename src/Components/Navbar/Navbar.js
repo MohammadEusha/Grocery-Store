@@ -1,13 +1,14 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUserPlus } from '@fortawesome/free-solid-svg-icons'
 import { UserContext } from '../../App';
 import logo from "../../Images/logo.png"
 import "../Style/Style.css"
+
 const Navbar = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     const [isSticky, setSticky] = useState(false);
     const [isCollapsed, setCollapsed] = useState(null);
+
     useEffect(() => {
         window.addEventListener("scroll", () => {
             if (window.scrollY > 10) {
@@ -18,7 +19,7 @@ const Navbar = () => {
         })
     }, []);
 
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+
     let display;
     if (loggedInUser) {
         display = <li style={{ marginLeft: '50px', fontWeight: 'bold' }} className="nav-item pt-2">
@@ -29,9 +30,10 @@ const Navbar = () => {
 
 
     return (
-        <nav className={(isSticky || isCollapsed) ? "navbar  navbar-expand-lg navbar-dark bg-dark fixed-top" : "navbar  navbar-expand-lg navbar-light color text-dark"}>
+        <nav className={(isSticky || isCollapsed) ? "navbar navbar-expand-lg navbar-dark bg-dark fixed-top" : "navbar  navbar-expand-lg navbar-light color text-dark"}>
+
             <div class="container-fluid">
-                <div className="col-md-6 ms-3">
+                <div>
                     <img className="transaction-area " style={{ height: "50px", }} src={logo} alt="" />
                     <a className="navbar-brand color ms-3 h1" href="#home">Grocery Store</a>
                 </div>
@@ -67,12 +69,12 @@ const Navbar = () => {
                         <li class="nav-item">
                             <Link style={{ textDecoration: 'none' }} class="nav-link color" to="/dashboard">Dashboard</Link>
                         </li>
-                        <li class="nav-item">
+                        {/* <li class="nav-item">
                             <a class="nav-link color" href="#contact">Contact</a>
                         </li>
                         <li class="nav-item">
                             <Link style={{ textDecoration: 'none' }} class="nav-link color" to="/login">LogIn</Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             </div>
