@@ -14,7 +14,7 @@ const FrontPage = () => {
                 <Navbar></Navbar>
                 <Header></Header>
             </div>
-            <div className="p-3">
+            <div className="">
                 <AboutProducts></AboutProducts>
                 <AboutService></AboutService>
                 <Home></Home>

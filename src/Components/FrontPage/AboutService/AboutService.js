@@ -2,8 +2,8 @@ import React from 'react';
 
 const AboutService = () => {
     return (
-        <div id="about" className="d-flex justify-content-center text-light">
-            <div class="row  container">
+        <div id="about" className="container text-light">
+            <div class="row ">
                 <h1 className="text-center display-2 mt-5 pt-5">How We Work</h1>
                 <div class="col-md-4 p-1">
                     <div class="card h-100 tomato">

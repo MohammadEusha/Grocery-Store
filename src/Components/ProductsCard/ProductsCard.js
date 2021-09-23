@@ -16,14 +16,21 @@ const ProductsCard = (props) => {
     return (
 
 
-        <div className="col-md-3 m-3 ">
+        <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-4 m-3 ">
             <div class="card h-auto mb-3 card-bg text-light border border-info border-2 rounded focus">
                 <img src={image} className="card-img-top img-fluid" alt="..." />
                 <div className="card-body">
                     <h5 className="text-center">{name} : {weight} Kg</h5>
-                    <div className="mt-3 d-flex">
-                        <h3 className="text-light col-md-6">${price}</h3>
-                        <button type="button" onClick={() => handleBuy(name)} className="btn btn-danger col-md-6 rounded-pill   "><FontAwesomeIcon icon={faCartPlus} />  Buy Now</button>
+
+                    <div className="mt-3 d-flex justify-content-between">
+
+                        <div className="">
+                            <h3 className="text-light ">${price}</h3>
+                        </div>
+
+                        <div className="">
+                            <button type="button" onClick={() => handleBuy(name)} className="btn btn-danger rounded-pill   "><FontAwesomeIcon icon={faCartPlus} />  Buy Now</button>
+                        </div>
                     </div>
 
                 </div>
