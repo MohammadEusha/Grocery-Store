@@ -2,6 +2,8 @@
   background-color: #12161f;
   color: white;
   height: 980px;
+  overflow-x: hidden;
+  padding: 10px;
 }
 
 @media (max-width: 600px) {
